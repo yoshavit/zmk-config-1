@@ -38,16 +38,16 @@
 
         default_layer {
             bindings = <
-	&kp Q      &kp W      &kp F       &kp P        &kp B          &kp J &kp L       &kp U       &kp Y      &kp SQT
-	&hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T  &kp G          &kp M &hm RSHFT N &hm RCTRL E &hm LALT I &hm RGUI O
-	&kp Z      &kp X      &kp C       &kp D        &kp V          &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH
-	           &lt MSE ESC   &lt NAV SPACE   &lt MED TAB          &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
+	&kp Q      &kp W      &kp E       &kp R        &kp T          &kp Y &kp U       &kp I       &kp O      &kp P
+	&hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F  &kp G          &kp H &hm RSHFT J &hm RGUI K  &hm LALT L &hm RCTRL SQT
+	&kp Z      &kp X      &kp C       &kp V        &kp B          &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH
+	           &lt MSE ESC   &lt NAV BSPC   &lt MED TAB          &lt FUN DEL  &lt NUM SPACE  &lt SYM RET
             >;
         };
         num_layer {
             bindings = <
 	&kp RBKT  &kp N7 &kp N8 &kp N9 &kp LBKT        &kp K_LOCK &trans    &trans    &trans   &reset
-	&kp SEMI  &kp N4 &kp N5 &kp N6 &kp EQUAL       &trans     &kp RSHFT &kp RCTRL &kp LALT &kp RGUI
+	&kp SEMI  &kp N4 &kp N5 &kp N6 &kp EQUAL       &trans     &kp RSHFT &kp RGUI &kp LALT &kp RCTRL
 	&kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH        &trans     &trans    &trans    &trans   &trans
 	           &kp DOT   &kp N0   &kp MINUS        &trans &trans &trans
             >;
@@ -55,7 +55,7 @@
         sym_layer {
             bindings = <
 	&kp RBRC  &kp AMPS &kp STAR  &kp LPAR  &kp LBRC        &kp K_LOCK &trans  &trans     &trans   &reset
-	&kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS        &trans &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI
+	&kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS        &trans &kp RSHFT  &kp RGUI  &kp LALT  &kp RCTRL
 	&kp TILDE &kp EXCL &kp AT    &kp HASH  &kp PIPE        &trans &trans  &trans &trans &trans
 	                  &kp LPAR  &kp RPAR   &kp UNDER              &trans &trans &trans
             >;
@@ -63,23 +63,23 @@
         fun_layer {
             bindings = <
 	&kp F12 &kp F7 &kp F8 &kp F9 &kp SYSREQ        &kp K_LOCK &trans  &trans     &trans   &reset
-	&kp F11 &kp F4 &kp F5 &kp F6 &trans            &trans &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI
+	&kp F11 &kp F4 &kp F5 &kp F6 &trans            &trans &kp RSHFT  &kp RGUI  &kp LALT  &kp RCTRL
 	&kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans &trans  &trans &trans &trans
-	                  &kp K_APP   &kp SPACE   &kp TAB     &trans &trans &trans
+	                  &kp K_APP   &kp BSPC   &kp TAB     &trans &trans &trans
             >;
         };
         nav_layer {
             bindings = <
 	&reset   &trans   &trans    &trans     &kp K_LOCK   &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_AGAIN
-	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp CAPS
+	&kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp CAPS
 	&trans   &trans   &trans    &trans     &trans       &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &kp INS
-	                  &trans   &trans   &trans                 &kp RET &kp BSPC &kp DEL
+	                  &trans   &trans   &trans                 &kp DEL &kp SPACE &kp RET
             >;
         };
         mse_layer {
             bindings = <
 	&reset   &trans   &trans    &trans     &kp K_LOCK   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &trans &trans &trans &trans
+	&kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans       &trans &trans &trans &trans &trans
 	&trans   &trans   &trans    &trans     &trans       &trans &trans &trans &trans &bt BT_CLR
 	                  &trans   &trans   &trans                 &trans &trans &trans
             >;
@@ -87,7 +87,7 @@
         med_layer {
             bindings = <
 	&reset   &trans   &trans    &trans     &kp K_LOCK   &trans &trans     &trans       &trans       &trans
-	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT
+	&kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans       &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT
 	&trans   &trans   &trans    &trans     &trans       &trans &trans     &trans       &trans       &trans
 	                  &trans   &trans   &trans                 &kp K_STOP2 &kp K_PP &kp K_MUTE
             >;
